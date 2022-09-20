@@ -12,14 +12,17 @@ export const filterOceania = (countries) => {
 // REQS: use .filter
 
 export const filterAu = (countries) => {
-  const auArray = countries.map((country) => country.name.includes('au'));
+  const auArray = countries.filter((country) => country.name.includes('au'));
   return auArray;
 };
 
 // INPUT: the array of dogs from data.js
 // OUTPUT: only dogs that are 2 years old or younger
 // REQS: use .filter
-export const filterYoungDogs = (dogs) => {};
+export const filterYoungDogs = (dogs) => {
+  const youngDogs = dogs.filter((dog) => dog.age <= 2);
+  return youngDogs;
+};
 
 // INPUT: the array of dogs from data.js
 // OUTPUT: a list of names of dogs that are 2 years old or younger
