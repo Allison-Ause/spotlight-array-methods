@@ -8,6 +8,17 @@ export const getSneaks = (brands) => {
   const shoesArray = brands.map((x) => x.shoes);
   return shoesArray.reduce((flat, next) => flat.concat(next), []);
 };
+/// return shoesArrays.flat();
+
+// const shoesArray = brands.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.shoes], []);
+// return shoesArray;
+
+// const sneakers = [];
+// brands.forEach(b => b.shoes.reduce((a, s) => {
+//   a.push(s);
+//   return a;
+// }, sneakers));
+// return sneakers;
 
 // INPUT: the array of dogs from data.js
 // OUTPUT: the average age of the dogs
@@ -17,11 +28,3 @@ export const getAverageAge = (dogs) => {
   const ageSum = ages.reduce((acc, age) => acc + age, 0);
   return Number(ageSum / ages.length);
 };
-
-///possible answer for 1:
-// const sneakers = [];
-// brands.forEach(b => b.shoes.reduce((a, s) => {
-//   a.push(s);
-//   return a;
-// }, sneakers));
-// return sneakers;
