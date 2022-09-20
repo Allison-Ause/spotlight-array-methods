@@ -12,7 +12,8 @@ export const filterOceania = (countries) => {
 // REQS: use .filter
 
 export const filterAu = (countries) => {
-  return countries.filter((country) => country.name.includes('au'));
+  const auArray = countries.map((country) => country.name.includes('au'));
+  return auArray;
 };
 
 // INPUT: the array of dogs from data.js
