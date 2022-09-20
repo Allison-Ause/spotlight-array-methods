@@ -4,8 +4,11 @@
 
 import { brands } from './data';
 
-export const getSneaks = (brands) => {};
-//call reduce on brands to get each brand.
+export const getSneaks = (brands) => {
+  //call reduce on brands to get each brand.'
+  const shoesArray = brands.map((x) => x.shoes);
+  return shoesArray.reduce((flat, next) => flat.concat(next), []);
+};
 //then put each brand's shoes into an accumulated array.
 //could spread shoes array into the push
 
