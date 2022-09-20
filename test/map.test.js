@@ -1,6 +1,5 @@
 import { brands, countries, dogs } from '../data';
 import { getBrands, getCountryCodes, getCountryNames } from '../map';
-import { getAverageAge } from '../reduce';
 
 test('getCountryNames should return the country names', () => {
   expect(getCountryNames(countries)).toStrictEqual([
