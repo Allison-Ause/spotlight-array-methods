@@ -2,7 +2,10 @@
 // OUTPUT: only countries in Oceana
 // REQS: use .filter
 
-export const filterOceania = (countries) => {};
+export const filterOceania = (countries) => {
+  const oceaniaArray = countries.filter((country) => country.continent === 'Oceania');
+  return oceaniaArray;
+};
 
 // INPUT: the array of countries from data.js
 // OUTPUT: only countries whose name that include the letters 'au'
