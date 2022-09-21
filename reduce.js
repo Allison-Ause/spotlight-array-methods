@@ -2,9 +2,41 @@
 // OUTPUT: an array of all the sneakers brands
 // REQS: use .reduce
 
-export const getSneaks = (brands) => {};
+import { brands, dogs } from './data';
+
+export const getSneaks = (brands) => {
+  const shoesArray = brands.map((x) => x.shoes);
+  return shoesArray.reduce((flat, next) => flat.concat(next), []);
+};
+/// return shoesArrays.flat();
+
+// return brands.reduce((acc, current) => {
+// acc.push(...current.shoes);
+// return acc;
+// }, []);
+
+//return brands.reduce((acc, current) => [...acc, ...current.shoes], []);
+// the accumulator starts off as the empty array we have at the end.
+
+// const shoesArray = brands.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.shoes], []);
+// return shoesArray;
+
+// const sneakers = [];
+// brands.forEach(b => b.shoes.reduce((a, s) => {
+//   a.push(s);
+//   return a;
+// }, sneakers));
+// return sneakers;
 
 // INPUT: the array of dogs from data.js
 // OUTPUT: the average age of the dogs
 // REQS: use .reduce
-export const getAverageAge = (dogs) => {};
+export const getAverageAge = (dogs) => {
+  const ages = dogs.map((dog) => dog.age);
+  const ageSum = ages.reduce((acc, age) => acc + age, 0);
+  return ageSum / ages.length;
+};
+
+// export const averageAge = (dogs) => {
+//   const sum = dogs.reduce((acc, currentDog) => acc + currentDog.age, 0) / dogs.length;
+// };
