@@ -10,6 +10,14 @@ export const getSneaks = (brands) => {
 };
 /// return shoesArrays.flat();
 
+// return brands.reduce((acc, current) => {
+// acc.push(...current.shoes);
+// return acc;
+// }, []);
+
+//return brands.reduce((acc, current) => [...acc, ...current.shoes], []);
+// the accumulator starts off as the empty array we have at the end.
+
 // const shoesArray = brands.reduce((previousValue, currentValue) => [...previousValue, ...currentValue.shoes], []);
 // return shoesArray;
 
@@ -26,5 +34,9 @@ export const getSneaks = (brands) => {
 export const getAverageAge = (dogs) => {
   const ages = dogs.map((dog) => dog.age);
   const ageSum = ages.reduce((acc, age) => acc + age, 0);
-  return Number(ageSum / ages.length);
+  return ageSum / ages.length;
 };
+
+// export const averageAge = (dogs) => {
+//   const sum = dogs.reduce((acc, currentDog) => acc + currentDog.age, 0) / dogs.length;
+// };
